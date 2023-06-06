@@ -13,6 +13,16 @@
         <!--==================== CSS ====================-->
         <link rel="stylesheet" href="./assets/css/styles.css">
 
+        <!--==================== E-Mail Js ====================-->
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init("mnpCMNbGoxwMUxgoA");
+            })();
+        </script>
+
         <title>Responsive Portfolio Website</title>
     </head>
     <body>
@@ -769,30 +779,30 @@
                         </div>
                     </div>
 
-                    <form action="https://formsubmit.co/singhsaurav062@gmail.com" method="POST" class="contact__form grid">
+                    <form action="" class="contact__form grid">
                         <div class="contact__inputs grid">
                             <div class="contact__content">
                                 <label for="" class="contact__label">Name</label>
-                                <input type="text" placeholder="Enter Your Name" class="contact__input">
+                                <input type="text" id="name" placeholder="Enter Your Name" class="contact__input">
                             </div>
 
                             <div class="contact__content">
                                 <label for="" class="contact__label">Email</label>
-                                <input type="email" placeholder="Enter Your Email" class="contact__input">
+                                <input type="email" id="email" placeholder="Enter Your Email" class="contact__input">
                             </div>
 
                             <div class="contact__content">
                                 <label for="" class="contact__label">Project</label>
-                                <input type="text" placeholder="Enter Project Name" class="contact__input">
+                                <input type="text" id="project" placeholder="Enter Project Name" class="contact__input">
                             </div>
 
                             <div class="contact__content">
                                 <label for="" class="contact__label">Message</label>
-                                <textarea name="" id="" cols="0" rows="10" placeholder="Type Your Message Here" class="contact__input"></textarea>
+                                <textarea name="" id="message" cols="0" rows="10" placeholder="Type Your Message Here" class="contact__input"></textarea>
                             </div>
 
                             <div>
-                                <a href="#" class="button button--flex">
+                                <a href="#" onclick="sendMail()" class="button button--flex">
                                     Send Message
                                     <i class="uil uil-message button__icon"></i>
                                 </a>
@@ -850,9 +860,6 @@
 
         <!--==================== SWIPER JS ====================-->
         <script src="./assets/js/swiper-bundle.min.js"></script>
-
-        <!--==================== SWIPER JS ====================-->
-        <script src="./assets/js/server.js"></script>
 
         <!--==================== MAIN JS ====================-->
         <script src="./assets/js/main.js"></script>
